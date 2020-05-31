@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configurar jogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="setGame(form)" method="post">
+    <ion-grid>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Configurar Jogo</ion-card-subtitle>
+          <ion-card-title>Jogo</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat,
+          cum excepturi sequi natus veniam voluptate ab voluptatum, inventore necessitatibus
+          fuga eveniet porro sunt magni, labore impedit adipisci iste eum reprehenderit.
+        </ion-card-content>
+      </ion-card>
+      <ion-row>
+        <ion-col>
+
+          <ion-item lines="none">
+            <ion-label> Nr. de rodadas</ion-label>
+          </ion-item>
+
+
+        </ion-col>
+        <ion-col>
+
+
+          <ion-item>
+
+            <ion-input type="number" ngModel name="frounds" aria-placeholder="10s"></ion-input>
+          </ion-item>
+
+
+
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+
+          <ion-item lines="none">
+            <ion-label> vs Jogador</ion-label>
+          </ion-item>
+
+
+        </ion-col>
+        <ion-col>
+
+          <ion-item lines="none">
+            {{ challengedUsername }} ()
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+
+          <ion-item lines="none">
+            <ion-label> tempo(em segudos)</ion-label>
+          </ion-item>
+
+
+        </ion-col>
+        <ion-col>
+
+          <ion-item>
+
+            <ion-input type="number" ngModel name="ftime" aria-placeholder="10s"></ion-input>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+          <ion-item lines="none">
+            <ion-label> Nivel(limite 5)</ion-label>
+          </ion-item>
+
+
+        </ion-col>
+        <ion-col>
+
+
+          <ion-item>
+
+            <ion-input type="number" ngModel name="flevel" aria-placeholder="1"></ion-input>
+          </ion-item>
+
+
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+    <ion-button type="submit" expand="full" info>Registar Partida</ion-button>
+  </form>
+
+</ion-content>

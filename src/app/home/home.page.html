@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-item>
+    <ion-avatar>
+     <ion-img [src]="photoUrl"></ion-img> 
+    </ion-avatar>
+    <ion-label>{{username}}</ion-label>
+    <p><ion-label>{{points}}</ion-label></p>
+   
+    <ion-label (click)="goOnline()">{{playerStatus}}</ion-label> 
+
+  </ion-item>
+</ion-header>
+<ion-content >
+  <ion-col>Jogadores Online</ion-col>
+  <ion-grid *ngFor="let _player of players">
+<ion-row>
+
+
+</ion-row>
+<ion-row >
+  <ion-col>
+    <ion-thumbnail slot="start">
+      <ion-img [src]="_player.photoUrl"></ion-img> 
+       <ion-avatar></ion-avatar>
+     </ion-thumbnail>
+     {{_player.username}}
+     <span>{{_player.points}}</span> 
+  </ion-col>
+  
+
+  <ion-col>
+ <ion-text (click)="challenge(_player.id)">
+    Desafiar
+ </ion-text>
+  </ion-col>
+  </ion-row>
+      
+  </ion-grid>
+
+</ion-content>

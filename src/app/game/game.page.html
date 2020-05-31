@@ -1,0 +1,71 @@
+<ion-header>
+ 
+ <ion-grid>
+
+<ion-row>
+
+<ion-col>
+  <ion-item lines="none">
+    <ion-avatar>
+      <ion-img [src]=""></ion-img> 
+     </ion-avatar>
+    
+   </ion-item>
+   <ion-item lines="none">
+  
+     <ion-label>{{challengerName}}</ion-label>
+   
+   </ion-item>
+
+</ion-col>
+
+VS
+
+<ion-col>
+  <ion-item lines="none">
+    <ion-avatar>
+      <ion-img [src]=""></ion-img> 
+     </ion-avatar>
+    
+   </ion-item>
+   <ion-item lines="none">
+  
+     <ion-label>{{challengedName}}</ion-label>
+   
+   </ion-item>
+</ion-col>
+
+
+
+</ion-row>
+
+ </ion-grid>
+  
+</ion-header>
+
+<ion-content>
+  <ion-item lines="none"> 
+
+  <ion-label>
+letra
+
+  </ion-label>
+  
+    <h1>B</h1>
+    </ion-item>
+
+
+    <ion-grid *ngFor="let question of questions">
+
+<ion-row >
+  <ion-col>{{question.question}}</ion-col>
+  <ion-col >
+    <ion-input (ionBlur)= "answered(question.id)" type="text" [(ngModel)]="answer" placeholder="resposta"></ion-input>
+  </ion-col>
+  <ion-col [hidden]="true"></ion-col>
+</ion-row>
+
+
+    </ion-grid>
+</ion-content>
+ 
