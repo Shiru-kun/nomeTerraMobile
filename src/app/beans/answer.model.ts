@@ -2,7 +2,7 @@ export class AnswerBean{
 
 playerId
 gameId
-questionId
+questioId
 answer
 
 

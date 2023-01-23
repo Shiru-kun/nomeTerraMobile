@@ -1,10 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Registar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header no-border>
+
+  <div class="login-header">
+  
+  <img src="assets/logo_prev.png"/>
+  
+  </div>
+  
+  
+  </ion-header>
 
 <ion-content>
+
+  <div class="center">
+    <div class="heading-columm-1">
+    
+      <h1 class="big-heading" routerLink="/signin">Entrar</h1>
+      <h1 class="small-heading">Registar</h1>
+      
+    </div>
+    
+    
+      </div>
+
   <form #form="ngForm" (ngSubmit)="signup(form)" method="post">
 
     <ion-item>
@@ -23,12 +40,13 @@
       <ion-label position="floating">Confirmar Password</ion-label>
       <ion-input type="password" ngModel name="fconfirm"></ion-input>
     </ion-item>
-    <ion-button type="submit" expand="full" primary>Registar</ion-button>
-   
-    <ion-text [routerLink]="['/signin']" > 
-      <span> Entrar</span>
-    </ion-text>
 
+
+      <div class="linespace"></div>
+    <ion-button type="submit" expand="block" [disabled]="internetStatus" shape="round" fill="solid" size="medium" color="success">Registar</ion-button>
+   
+    
+    
 
   </form>
 

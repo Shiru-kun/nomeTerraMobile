@@ -1,5 +1,5 @@
 <ion-header>
- 
+<!--  
  <ion-grid>
 
 <ion-row>
@@ -40,32 +40,64 @@ VS
 </ion-row>
 
  </ion-grid>
+   -->
+
+    <div class="gamePlayers">
+    <div class="challenger">
+      <ion-item lines="none">
+        <ion-avatar>
+          <ion-img src="/assets/logo_prev.png"></ion-img> 
+         </ion-avatar>
+        
+       </ion-item>
+       <ion-item lines="none">
+      
+         <ion-label>Focas</ion-label>
+       
+       </ion-item>
+    
+      </div>
+    
+      
+    
+      <div class="challenged">
+        <ion-item lines="none">
+          <ion-avatar>
+            <ion-img src="/assets/logo_prev.png"></ion-img> 
+           </ion-avatar>
+          
+         </ion-item>
+         <ion-item lines="none">
+        
+           <ion-label>Focas</ion-label>
+         
+         </ion-item>
+      
+        </div>
+    
+    </div>
   
 </ion-header>
 
 <ion-content>
-  <ion-item lines="none"> 
+  <div class="gameLetter">
+ <h1>F</h1>
+  </div>
 
-  <ion-label>
-letra
-
-  </ion-label>
-  
-    <h1>B</h1>
-    </ion-item>
-
-
-    <ion-grid *ngFor="let question of questions">
-
-<ion-row >
-  <ion-col>{{question.question}}</ion-col>
-  <ion-col >
-    <ion-input (ionBlur)= "answered(question.id)" type="text" [(ngModel)]="answer" placeholder="resposta"></ion-input>
-  </ion-col>
-  <ion-col [hidden]="true"></ion-col>
-</ion-row>
-
-
-    </ion-grid>
+    <ion-slides scrollbar="false" pager="true" [options]="slideOpts">
+      <ion-slide>
+        
+        <div class="questionStyle">
+        
+          <h1>Pergunta</h1> 
+           <p class="img">?</p> 
+     
+       <p>  
+       <ion-input type="text" placeholder="Resposta"></ion-input>
+       </p>  
+      </div>
+      </ion-slide>
+     
+    </ion-slides>
 </ion-content>
  

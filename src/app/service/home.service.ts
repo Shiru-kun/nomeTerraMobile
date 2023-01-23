@@ -26,4 +26,8 @@ goOnline(id){
     return this.http.get<Player>(url,httpOptions);
 
   }
+
+
+
+  
 }

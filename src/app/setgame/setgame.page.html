@@ -1,9 +1,3 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Configurar jogo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <form #form="ngForm" (ngSubmit)="setGame(form)" method="post">
     <ion-grid>
@@ -23,7 +17,7 @@
         <ion-col>
 
           <ion-item lines="none">
-            <ion-label> Nr. de rodadas</ion-label>
+            <ion-label>Rodadas</ion-label>
           </ion-item>
 
 
@@ -46,7 +40,7 @@
         <ion-col>
 
           <ion-item lines="none">
-            <ion-label> vs Jogador</ion-label>
+            <ion-label>Adversário</ion-label>
           </ion-item>
 
 
@@ -54,7 +48,7 @@
         <ion-col>
 
           <ion-item lines="none">
-            {{ challengedUsername }} ()
+            {{ challengedUsername }} 
           </ion-item>
         </ion-col>
       </ion-row>
@@ -63,7 +57,7 @@
         <ion-col>
 
           <ion-item lines="none">
-            <ion-label> tempo(em segudos)</ion-label>
+            <ion-label> Tempo</ion-label>
           </ion-item>
 
 
@@ -81,7 +75,7 @@
         <ion-col>
 
           <ion-item lines="none">
-            <ion-label> Nivel(limite 5)</ion-label>
+            <ion-label>Perguntas</ion-label>
           </ion-item>
 
 
@@ -100,7 +94,9 @@
 
 
     </ion-grid>
-    <ion-button type="submit" expand="full" info>Registar Partida</ion-button>
+    <div class="linespace"></div>
+    <ion-button type="submit" expand="block" info  shape="round" fill="solid" size="medium" color="success">Registar Partida</ion-button>
+   
   </form>
 
 </ion-content>

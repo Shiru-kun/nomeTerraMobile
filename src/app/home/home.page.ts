@@ -3,6 +3,8 @@ import { Player } from "../beans/player.model";
 import { StorageService } from "../service/storage.service";
 import { HomeService } from "../service/home.service";
 import { Router } from '@angular/router';
+import { GameService } from '../service/game.service';
+import { Game } from '../beans/gameBean.model';
 
 @Component({
   selector: "app-home",
@@ -15,11 +17,13 @@ export class HomePage {
   username
   points
   photoUrl
+  private timer:any;
 
   playerStatus
   constructor(
     private storage: StorageService,
     private homeService: HomeService,
+    private gameService:GameService,
     private route:Router
   ) {}
 
@@ -54,6 +58,27 @@ export class HomePage {
         });
      })
    
+     this.timer = setInterval(()=>{
+      this.storage.get("id").then((id) => {
+      
+        this.gameService.iWasChallenged(id).subscribe(response=>{
+           let game:Game= response 
+          if(response!==null){
+              console.log(response)
+         
+              this.route.navigateByUrl("/game")
+              
+              
+            }
+              
+
+        })
+      });
+
+
+    },5000);
+
+     
   }
 
   goOnline(){

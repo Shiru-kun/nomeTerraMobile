@@ -1,27 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Entrar</ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+
+<div class="login-header">
+
+<img src="assets/logo_prev.png"/>
+
+</div>
+
+
 </ion-header>
 
 <ion-content>
+ 
+  <div class="center">
+<div class="heading-columm-1">
+
+  <h1 class="big-heading">Entrar</h1>
+  <h1 class="small-heading" routerLink="/signup">Registar</h1>
+  
+</div>
+
+
+  </div>
+
   <form #form="ngForm" (ngSubmit)="signin(form)" method="post">
 
   
     <ion-item>
-      <ion-label position="floating">Username</ion-label>
+      <ion-label position="floating">Nome de Utilizador</ion-label>
       <ion-input type="text" ngModel name="fusername"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Password</ion-label>
+      <ion-label position="floating">Senha</ion-label>
       <ion-input type="password" ngModel name="fpassword"></ion-input>
     </ion-item>
- 
-    <ion-button type="submit" expand="full" info>Entrar</ion-button>
+
+    <div class="linespace"></div>
+    <ion-button type="submit" expand="block" [disabled]="internetStatus"  shape="round" fill="solid" size="medium" color="success">Entrar</ion-button>
    
-    <ion-text [routerLink]="['/signup']" > 
-      <span> registar</span>
-    </ion-text>
+    
 
 
   </form>

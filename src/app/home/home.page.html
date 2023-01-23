@@ -1,5 +1,35 @@
 <ion-header>
-  <ion-item>
+
+  <!-- 
+    <div class="home-header"> </div>
+  <div class="header-content">
+
+    <img src="/assets/logo_prev.png" />
+
+
+    <ion-label>
+      <h1>Focas</h1>
+      <p>50pts</p>
+      <p>Desafiante</p>
+
+    </ion-label>
+
+
+
+  </div> 
+-->
+
+<ion-toolbar>
+  
+  <ion-buttons slot="start"> 
+<ion-menu-button menu="main-menu"></ion-menu-button>
+  </ion-buttons>
+
+</ion-toolbar>
+
+
+
+  <!-- <ion-item>
     <ion-avatar>
      <ion-img [src]="photoUrl"></ion-img> 
     </ion-avatar>
@@ -8,33 +38,118 @@
    
     <ion-label (click)="goOnline()">{{playerStatus}}</ion-label> 
 
-  </ion-item>
+  </ion-item> -->
 </ion-header>
-<ion-content >
-  <ion-col>Jogadores Online</ion-col>
-  <ion-grid *ngFor="let _player of players">
-<ion-row>
+<ion-content>
+
+  <!-- <ion-grid *ngFor="let _player of players">
+    <ion-row>
 
 
-</ion-row>
-<ion-row >
-  <ion-col>
-    <ion-thumbnail slot="start">
-      <ion-img [src]="_player.photoUrl"></ion-img> 
-       <ion-avatar></ion-avatar>
-     </ion-thumbnail>
-     {{_player.username}}
-     <span>{{_player.points}}</span> 
-  </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-thumbnail slot="start">
+          <ion-img [src]="_player.photoUrl"></ion-img>
+          <ion-avatar></ion-avatar>
+        </ion-thumbnail>
+        {{_player.username}}
+        <span>{{_player.points}}</span>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-text (click)="challenge(_player.id)">
+          Desafiar
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid> -->
+  <div class="linespace"></div>
+  <ion-grid>
+
+    <ion-row>
+     
+      <ion-col class="playerList">
+
+       
+        <div class="playerImg">
+         <ion-avatar>
+           <img src="/assets/logo_prev.png" />
+         </ion-avatar>
+       </div>
+       
+       <div class="playerInfo">
+         <ion-label>
+           <h3>Shiru-kun</h3>
+           <span>100pts</span>
+         <p>
+           <button class="challengeButton"> Desafiar</button>
+           </p>
+         </ion-label>
+       </div>
+       
+    
+    
+    
+    
+    
+    </ion-col>
+    <ion-col class="playerList">
+
+       
+      <div class="playerImg">
+       <ion-avatar>
+         <img src="/assets/logo_prev.png" />
+       </ion-avatar>
+     </div>
+     
+     <div class="playerInfo">
+       <ion-label>
+         <h3>Shiru-kun</h3>
+         <span>100pts</span>
+       <p>
+         <button class="challengeButton"> Desafiar</button>
+         </p>
+       </ion-label>
+     </div>
+     
   
-
-  <ion-col>
- <ion-text (click)="challenge(_player.id)">
-    Desafiar
- </ion-text>
+  
+  
+  
+  
   </ion-col>
-  </ion-row>
-      
-  </ion-grid>
 
+   <ion-col class="playerList">
+
+       
+    <div class="playerImg">
+     <ion-avatar>
+       <img src="/assets/logo_prev.png" />
+     </ion-avatar>
+   </div>
+   
+   <div class="playerInfo">
+     <ion-label>
+       <h3>Shiru-kun</h3>
+       <span>100pts</span>
+     <p>
+       <button class="challengeButton"> Desafiar</button>
+       </p>
+     </ion-label>
+   </div>
+   
+
+
+
+
+
+</ion-col>
+
+
+    </ion-row>
+
+  </ion-grid>
 </ion-content>

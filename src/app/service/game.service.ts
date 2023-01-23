@@ -36,9 +36,25 @@ setGame(bean:Game){
     return this.http.get<Question[]>(url,httpOptions);
 
   }
+  
  saveAns(ans:AnswerBean){
     let url =apiBaseUrl.concat(`/api/answer`);
     return this.http.post(url,ans,httpOptions);
+
+ 
+  }
+
+
+  isWinner(gameId, playerId){
+    let url =apiBaseUrl.concat(`/api/isWinner/${gameId}/${playerId}`);
+    return this.http.get(url,httpOptions);
+}
+
+
+
+  iWasChallenged(playerId){
+    let url =apiBaseUrl.concat(`/api/getChallengedGame/${playerId}`);
+    return this.http.get<Game>(url,httpOptions);
 
   }
 }
